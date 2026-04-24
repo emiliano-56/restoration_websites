@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoration Bible College & Seminary</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/static/images/logo-4.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/css/index.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+        <div class="logo-section">
+            <img src="/static/images/logo5.png" alt="Logo">
+            <div class="logo-text">
+                <h2>Restoration Bible<br>College & Seminary</h2>
+            </div>
+        </div>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/partners">Partners</a>
+            <a href="/donations">Donations</a>
+            <a href="/faq">FAQ</a>
+                <a href="/faq">Blog</a>
+             <a href="/faq">About us</a>
+          
+        </nav>
+    </header>
+
+    <!-- =========================
+         HERO CAROUSEL
+    ========================== -->
+ <section class="hero-slider">
+
+    <!-- Left Arrow -->
+    <button class="arrow left" onclick="prevSlide()">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- SLIDE 1 -->
+    <div class="slide active">
+        <img class="desktop-img" src="/static/images/hero1.jpg" alt="Hero Slide 1">
+        <img class="mobile-img" src="/static/images/mobile-hero1.jpg" alt="Hero Slide 1 Mobile">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <p class="small-text">EQUIPPING LEADERS. TRANSFORMING LIVES.</p>
+
+            <h1>
+                Restoration Bible<br>
+                College & Seminary
+            </h1>
+
+            <p class="description">
+                Raising Christ-centered leaders through biblical truth,
+                academic excellence, and spiritual formation
+                for Kingdom impact.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn primary">Explore Programs</a>
+                <a href="#" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <img class="desktop-img" src="/static/images/hero-2.jpg" alt="Hero Slide 2">
+          <img class="mobile-img" src="/static/images/mobile-hero2.jpg" alt="Hero Slide 1 Mobile">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <p class="small-text">BUILDING FAITH. EMPOWERING PURPOSE.</p>
+
+            <h1>
+                Academic Excellence<br>
+                With Spiritual Depth
+            </h1>
+
+            <p class="description">
+                Learn in an environment designed to shape your calling,
+                strengthen your faith, and prepare you for Kingdom service.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn primary">View Courses</a>
+                <a href="#" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+        <img class="desktop-img" src="/static/images/hero3.jpg" alt="Hero Slide 3">
+       <img class="mobile-img" src="/static/images/mobile-hero3.jpg" alt="Hero Slide 1 Mobile">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <p class="small-text">PREPARING LEADERS FOR IMPACT</p>
+
+            <h1>
+                Ministry Training<br>
+                For The Next Generation
+            </h1>
+
+            <p class="description">
+                Discover biblical education that transforms lives and
+                equips students for leadership across nations.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn primary">Apply Now</a>
+                <a href="#" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Arrow -->
+    <button class="arrow right" onclick="nextSlide()">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Dots -->
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+
+</section>
+
+    <!-- =========================
+         FEATURES BAR
+    ========================== -->
+    <section class="features">
+        <div class="feature-box">
+            <i class="fa-solid fa-book-open"></i>
+            <div>
+                <h3>Biblical Foundation</h3>
+                <p>Grounded in Scripture for life and ministry.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+                <h3>Academic Excellence</h3>
+                <p>Quality education for effective leadership.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-regular fa-user"></i>
+            <div>
+                <h3>Spiritual Formation</h3>
+                <p>Shaping character and calling.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <i class="fa-solid fa-globe"></i>
+            <div>
+                <h3>Kingdom Impact</h3>
+                <p>Equipping you to serve and transform the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         PROGRAMS
+    ========================== -->
+    <section class="programs">
+        <h2>Our Programs</h2>
+        <p class="section-subtitle">
+            Programs designed to deepen your understanding and empower your calling.
+        </p>
+
+        <div class="program-grid">
+
+            <div class="program-card">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Certificate in Biblical Studies</h3>
+                <p>Build a strong foundation in the Word of God.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Diploma in Ministry</h3>
+                <p>Practical training for effective ministry.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Bachelor of Theology</h3>
+                <p>In-depth study for future leaders.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+            <div class="program-card">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>Master of Divinity</h3>
+                <p>Advanced theological education.</p>
+                <a href="#">Learn More →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+         PARTNERS
+    ========================== -->
+    <section class="partners">
+        <h2>Our Partners</h2>
+        <p class="section-subtitle">
+            We are grateful to partner with organizations that share our vision.
+        </p>
+
+        <div class="partner-grid">
+            <div>Faith Global Ministries</div>
+            <div>Word & Spirit Foundation</div>
+            <div>Global Harvest Network</div>
+            <div>Christ-Centered Alliance</div>
+            <div>Kingdom Builders International</div>
+        </div>
+    </section>
+
+
+<!-- =========================
+     TESTIMONIAL SECTION
+========================== -->
+<section class="testimonials">
+    <h2>What Our Students Say</h2>
+    <p class="section-subtitle">
+        Hear from students whose lives have been transformed through biblical education.
+    </p>
+<br>
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+
+            <div class="testimonial-avatar">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Pastor Daniel James">
+            </div>
+
+            <p>
+                This institution gave me clarity, purpose, and deep
+                biblical understanding for ministry.
+            </p>
+
+            <h4>— Pastor Daniel James</h4>
+        </div>
+
+        <div class="testimonial-card">
+
+            <div class="testimonial-avatar">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Williams">
+            </div>
+
+            <p>
+                The spiritual formation and academic excellence here
+                shaped my leadership journey tremendously.
+            </p>
+
+            <h4>— Sarah Williams</h4>
+        </div>
+
+        <div class="testimonial-card">
+
+            <div class="testimonial-avatar">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Minister Grace Paul">
+            </div>
+
+            <p>
+                I found both calling and confidence through the
+                programs offered at RBCS.
+            </p>
+
+            <h4>— Minister Grace Paul</h4>
+        </div>
+
+    </div>
+</section>
+    <!-- =========================
+         DONATION CTA
+    ========================== -->
+    <section class="donation-banner">
+        <div class="donation-left">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+            <div>
+                <h2>Support the Mission</h2>
+                <p>
+                    Your generosity helps equip leaders and
+                    transform lives through biblical education.
+                </p>
+            </div>
+        </div>
+
+        <a href="#" class="donate-btn">
+            Make a Donation →
+        </a>
+    </section>
+
+    
+<!-- =========================
+        FOOTER
+========================= -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- LOGO + ABOUT -->
+        <div class="footer-col">
+            <img src="/static/images/logo-3.png" alt="Logo" class="footer-logo">
+
+            <h3>Restoration Bible<br>College & Seminary</h3>
+
+            <p>Equipping Leaders. Transforming Lives.</p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/partners">Partners</a>
+            <a href="/donations">Donations</a>
+            <a href="/donations">Blog</a>
+            <a href="/faq">FAQ</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> +2347065000800</p>
+            <p><i class="fa-solid fa-envelope"></i> info@restorationbibles.edu</p>
+            <p><i class="fa-solid fa-location-dot"></i> 123 Faith Way, Kingdom City</p>
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT + LEGAL LINKS -->
+    <div class="copyright">
+        <p>
+            © <span id="year"></span> Restoration Bible College & Seminary. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="/terms">Terms & Conditions</a>
+            <span>•</span>
+            <a href="/privacy">Privacy Policy</a>
+        </div>
+    </div>
+
+</footer>
+
+<!-- =========================
+        JAVASCRIPT
+========================= -->
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+    <!-- JS -->
+    <script src="/static/js/index.js"></script>
+     <script src="/static/js/harmburger.js"></script>
+</body>
+</html>
+
