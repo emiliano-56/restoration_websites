@@ -210,9 +210,9 @@ courses = [
 @app.get("/")
 def home(request: Request):
     return templates.TemplateResponse(
-        "index.html",
-        {
-            "request": request,
+        request=request,
+        name="index.html",
+        context={
             "title": "Restoration Bible College & Seminary"
         }
     )
@@ -231,13 +231,13 @@ def course(request: Request, id: int = None):
         selected_course = next((c for c in courses if c["id"] == id), None)
 
     return templates.TemplateResponse(
-        "course.html",
-        {
-            "request": request,
-            "title": "Course Details",
-            "course": selected_course
-        }
-    )
+    request=request,
+    name="course.html",
+    context={
+        "title": "Course Details",
+        "course": selected_course
+    }
+)
 
 # =====================================
 # API: GET ALL COURSES
