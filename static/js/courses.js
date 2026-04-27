@@ -16,7 +16,7 @@ let categoryTotalPages = 1;
 // =========================
 async function loadCategories(page = 1) {
     try {
-        const res = await fetch(`http://127.0.0.1:8000/api/categories?page=${page}&limit=5`);
+        const res = await fetch(`https://restoration-websites.onrender.com/api/categories?page=${page}&limit=5`);
         const result = await res.json();
 
         const programList = document.getElementById("programList");
@@ -116,7 +116,7 @@ function renderCategoryPagination() {
 // =========================
 async function fetchCourses(category = "all", page = 1, search = "") {
 
-    let url = `http://127.0.0.1:8000/api/courses/filter?category=${category}&page=${page}&limit=4&search=${encodeURIComponent(search)}`;
+    let url = `https://restoration-websites.onrender.com/api/courses/filter?category=${category}&page=${page}&limit=4&search=${encodeURIComponent(search)}`;
 
     try {
         const response = await fetch(url);

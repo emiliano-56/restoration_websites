@@ -17,7 +17,7 @@ let searchTimeout;
 // =========================
 async function fetchCourses(category = "all", page = 1, search = "") {
 
-    let url = `http://127.0.0.1:8000/api/courses/filter?category=${category}&page=${page}&limit=4&search=${encodeURIComponent(search)}`;
+    let url = `https://restoration-websites.onrender.com/api/courses/filter?category=${category}&page=${page}&limit=4&search=${encodeURIComponent(search)}`;
 
     try {
         const response = await fetch(url);
