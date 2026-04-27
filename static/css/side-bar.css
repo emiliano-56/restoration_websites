@@ -1,0 +1,51 @@
+#categoryPagination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 10px;
+    border-top: 1px solid rgba(6, 42, 123, 0.15);
+    background: #f8f9ff;
+    border-radius: 8px;
+}
+
+/* Buttons (match main pagination style) */
+#categoryPagination button {
+    background: #062a7b;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(6, 42, 123, 0.15);
+}
+
+/* Hover effect (same red accent like main pagination) */
+#categoryPagination button:hover {
+    background: red;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 0, 0, 0.25);
+}
+
+/* Disabled state */
+#categoryPagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Page text */
+#categoryPagination span {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #062a7b;
+    padding: 6px 10px;
+    border: 1px solid rgba(6, 42, 123, 0.2);
+    border-radius: 6px;
+    background: #ffffff;
+}

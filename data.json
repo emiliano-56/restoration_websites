@@ -1,0 +1,54 @@
+ [ {
+    "id": 5,
+    "title": "Ministry Leadership Training",
+    "category": "ministry",
+    "duration": "1 Year Program",
+    "mode": "On-campus & Online",
+    "level": "Leadership Development",
+    "description": "Specialized training designed to equip leaders for effective church ministry and Kingdom service."
+},
+
+{
+    "id": 6,
+    "title": "Church Planting & Missions",
+    "category": "ministry",
+    "duration": "2 Year Program",
+    "mode": "Hybrid Learning",
+    "level": "Mission Focused",
+    "description": "Prepare for evangelism, missions, and church planting with practical and biblical ministry training."
+},
+
+{
+    "id": 7,
+    "title": "Online Certificate in Christian Leadership",
+    "category": "online",
+    "duration": "6 Months Program",
+    "mode": "Fully Online",
+    "level": "Flexible Learning",
+    "description": "A fully online program created for working professionals and ministry leaders seeking biblical leadership training."
+},
+
+{
+    "id": 8,
+    "title": "Online Bachelor of Biblical Studies",
+    "category": "online",
+    "duration": "4 Year Program",
+    "mode": "Fully Online",
+    "level": "Distance Learning",
+    "description": "Earn your degree remotely with a comprehensive online biblical studies program built for global access."
+}
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+

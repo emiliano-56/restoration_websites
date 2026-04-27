@@ -1,0 +1,22 @@
+.program-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .program-image {
+        max-height: 180px;   /* makes image smaller on mobile */
+        object-fit: cover;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .program-image {
+        max-height: 140px;
+    }
+}

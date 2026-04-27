@@ -1,0 +1,157 @@
+/* =========================
+   COURSE DETAIL SECTION
+========================= */
+
+.course-detail {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+.course-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.course-header h1 {
+    font-size: 2.5rem;
+    color: #062a7b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.course-description {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* BODY LAYOUT */
+.course-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+/* MAIN CONTENT */
+.course-main {
+    width: 100%;
+}
+
+/* IMAGE */
+.course-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+/* META INFO */
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.course-meta span {
+    background: #f1f4fb;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #062a7b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+/* SECTION BLOCKS */
+.course-section {
+    margin-bottom: 30px;
+}
+
+.course-section h3 {
+    font-size: 1.3rem;
+    color: #062a7b;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid red;
+}
+
+.course-section p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.course-section ul {
+    padding-left: 20px;
+}
+
+.course-section li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* SIDEBAR */
+.course-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+/* VIDEO */
+.video-box {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+/* APPLY BUTTON */
+.apply-course-btn {
+    display: block;
+    width: 100%;
+    background: red;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.apply-course-btn:hover {
+    background: #062a7b;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .course-body {
+        grid-template-columns: 1fr;
+    }
+
+    .course-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .video-box {
+        height: 250px;
+    }
+
+    .course-header h1 {
+        font-size: 2rem;
+    }
+}

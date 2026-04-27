@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses Page</title>
+
+    <link rel="icon" type="image/png" href="/static/images/logo-4.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="/static/css/course.css">
+    <link rel="stylesheet" href="/static/css/apply-button.css">
+        <link rel="stylesheet" href="/static/css/detail-page.css">
+          <link rel="stylesheet" href="/static/css/side-bar.css">
+           <link rel="stylesheet" href="/static/css/course-card.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo-section">
+        <img src="/static/images/logo5.png" alt="Logo">
+        <div class="logo-text">
+            <h2>Restoration Bible<br>College & Seminary</h2>
+        </div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav>
+        <a href="/" class="active">Home</a>
+        <a href="/courses">Courses</a>
+        <a href="/partners">Partners</a>
+        <a href="/donations">Donations</a>
+        <a href="/faq">FAQ</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About Us</a>
+        <a href="/apply" id="apply-btn">Apply Now</a>
+    </nav>
+</header>
+
+
+{% if course %}
+
+<!-- =========================
+     SINGLE COURSE PAGE
+========================= -->
+
+<section class="course-detail">
+
+    <div class="course-header">
+        <h1>{{ course.title }}</h1>
+        <p class="course-description">{{ course.description }}</p>
+    </div>
+
+    <div class="course-body">
+
+        <!-- LEFT -->
+        <div class="course-main">
+
+            <img src="{{ course.image_url }}" class="course-image">
+
+            <div class="course-meta">
+                <span><i class="fa-solid fa-clock"></i> {{ course.duration }}</span>
+                <span><i class="fa-solid fa-globe"></i> {{ course.mode }}</span>
+                <span><i class="fa-solid fa-layer-group"></i> {{ course.level }}</span>
+            </div>
+
+            <div class="course-section">
+                <h3>Overview</h3>
+                <p>{{ course.overview }}</p>
+            </div>
+
+            <div class="course-section">
+                <h3>Curriculum</h3>
+                <ul>
+                    {% for item in course.curriculum %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="course-section">
+                <h3>Career Paths</h3>
+                <ul>
+                    {% for item in course.career_paths %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="course-sidebar">
+
+            <div class="video-box">
+                <iframe src="{{ course.video_url }}" allowfullscreen></iframe>
+            </div>
+
+            <a href="/apply" class="apply-course-btn">
+                Apply for this Course
+            </a>
+
+        </aside>
+
+    </div>
+
+</section>
+
+{% else %}
+
+<!-- =========================
+     NORMAL COURSES PAGE (YOUR ORIGINAL)
+========================= -->
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <p class="breadcrumb">
+            HOME <span>/</span>
+            <span class="red">COURSES</span>
+        </p>
+
+        <h1>
+            Courses That Equip.<br>
+            Calling That Transforms.
+        </h1>
+
+        <p class="hero-text">
+            Our programs are biblically grounded, academically excellent,
+            and practically focused to prepare you for effective ministry
+            and Kingdom impact.
+        </p>
+
+        <div class="red-line"></div>
+    </div>
+</section>
+
+<section class="features-bar">
+    <div class="feature">
+        <i class="fa-solid fa-book-open"></i>
+        <div>
+            <h4>Biblical Foundation</h4>
+            <p>Grounded in Scripture<br>for life and ministry.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <div>
+            <h4>Academic Excellence</h4>
+            <p>Quality education for<br>effective leadership.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <i class="fa-regular fa-user"></i>
+        <div>
+            <h4>Spiritual Formation</h4>
+            <p>Shaping character<br>and calling.</p>
+        </div>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-globe"></i>
+        <div>
+            <h4>Kingdom Impact</h4>
+            <p>Equipping you to serve<br>and transform the world.</p>
+        </div>
+    </div>
+</section>
+
+<section class="main-content">
+
+    <aside class="sidebar">
+        <div class="program-box">
+            <h3>Explore Our Programs</h3>
+
+            <ul id="programList">
+                 <li class="active" data-category="all">All Programs</li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="programs-section">
+
+        <div class="section-top">
+            <h2 id="sectionTitle">All Programs</h2>
+        </div>
+
+        <div class="search-box">
+            <input id="courseSearch" placeholder="Search courses..." />
+        </div>
+
+        <div class="program-grid" id="programGrid"></div>
+
+    </div>
+</section>
+
+{% endif %}
+
+
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <!-- LOGO + ABOUT -->
+        <div class="footer-col">
+            <img src="/static/images/logo-3.png" alt="Logo" class="footer-logo">
+
+            <h3>Restoration Bible<br>College & Seminary</h3>
+
+            <p>Equipping Leaders. Transforming Lives.</p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/partners">Partners</a>
+            <a href="/donations">Donations</a>
+            <a href="/donations">Blog</a>
+            <a href="/faq">FAQ</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p><i class="fa-solid fa-phone"></i> +2347065000800</p>
+            <p><i class="fa-solid fa-envelope"></i> info@restorationbibles.edu</p>
+            <p><i class="fa-solid fa-location-dot"></i> 123 Faith Way, Kingdom City</p>
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT + LEGAL LINKS -->
+    <div class="copyright">
+        <p>
+            © <span id="year"></span> Restoration Bible College & Seminary. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="/terms">Terms & Conditions</a>
+            <span>•</span>
+            <a href="/privacy">Privacy Policy</a>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+<script>
+document.getElementById("year") && (document.getElementById("year").textContent = new Date().getFullYear());
+</script>
+
+<script src="/static/js/harmburger.js"></script>
+
+<script src="/static/js/courses.js"></script>
+
+</body>
+</html>
